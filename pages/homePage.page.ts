@@ -7,7 +7,7 @@ export class HomePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.dynamicIdLink = page.locator('#overview .row:nth-child(1) .col-sm:nth-child(1) a')
+    this.dynamicIdLink = page.getByRole('link', { name: 'Dynamic ID' })
   }
 
   // methods
