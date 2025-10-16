@@ -41,6 +41,9 @@ npx playwright test --headed
 
 # Executar testes em modo debug
 npx playwright test --debug
+
+# Gerar código de teste automaticamente
+npx playwright codegen
 ```
 
 ### Comandos Avançados
@@ -76,6 +79,38 @@ Este comando abre uma interface visual onde você pode:
 - Ver o código dos testes
 - Executar testes em modo debug
 - Ver screenshots e vídeos dos testes
+
+### Codegen (Gerador de Código)
+
+O Playwright Codegen é uma ferramenta incrível que gera código de teste automaticamente enquanto você interage com a aplicação:
+
+```bash
+# Gerar código para o site atual
+npx playwright codegen
+
+# Gerar código para um site específico
+npx playwright codegen https://example.com
+
+# Gerar código com navegador específico
+npx playwright codegen --browser=chromium
+
+# Gerar código e salvar em arquivo específico
+npx playwright codegen --target=typescript --output=tests/meu-teste.spec.ts
+```
+
+**Como usar o Codegen:**
+
+1. Execute o comando `npx playwright codegen`
+2. Uma janela do navegador será aberta
+3. Navegue pela aplicação normalmente (cliques, digitação, etc.)
+4. O Playwright irá gerar o código automaticamente no terminal
+5. Copie o código gerado para seus arquivos de teste
+
+**Exemplo de uso:**
+```bash
+# Para gerar código testando o site do projeto
+npx playwright codegen http://uitestingplayground.com/
+```
 
 ## 📁 Estrutura do Projeto
 
@@ -227,9 +262,10 @@ npx playwright test
 ## 📚 Recursos Úteis
 
 - [Documentação Oficial do Playwright](https://playwright.dev/)
-- [Playwright Test Generator](https://playwright.dev/docs/codegen)
+- [Playwright Test Generator (Codegen)](https://playwright.dev/docs/codegen)
 - [Playwright Inspector](https://playwright.dev/docs/debug)
 - [Best Practices](https://playwright.dev/docs/best-practices)
+- [Playwright UI Mode](https://playwright.dev/docs/test-ui-mode)
 
 ## 🤝 Contribuição
 
