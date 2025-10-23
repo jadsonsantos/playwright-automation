@@ -15,7 +15,7 @@ test.describe('HomePage Tests', () => {
   });
 
   test('should click on Dynamic ID link', async () => {
-    await homePage.clickOnDynamicIdLink();
+    await homePage.clickOnLink('Dynamic ID')
     await expect(homePage.page).toHaveURL(/.*dynamicid/);
   });
 
