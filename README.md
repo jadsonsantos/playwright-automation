@@ -278,3 +278,5 @@ npx playwright test
 ## 📄 Licença
 
 Este projeto está sob a licença ISC.
+
+// Replicate what we did on DynamicId page with Class Attribute
